@@ -1,26 +1,26 @@
 package com.example.teamproject;
-
+import android.app.AlertDialog
+import android.app.Dialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageButton
+import android.widget.Button
+import androidx.fragment.app.DialogFragment
 
 class MainActivity : AppCompatActivity() {
+    lateinit var loginBtn : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
-//        val intent= Intent(this, StartActivity::class.java)
-//        startActivity(intent)
+        val intent= Intent(this, StartActivity::class.java)
+        startActivity(intent)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        loginBtn = findViewById<Button>(R.id.loginBtn)
 
-        var button1=findViewById<ImageButton>(R.id.button)
-        var button2=findViewById<ImageButton>(R.id.button2)
-        button1.setOnClickListener {
-            var intent=Intent(applicationContext, BringtxtActivity::class.java)
-            startActivity(intent)
-        }
-
-        button2.setOnClickListener{
-            var intent=Intent(applicationContext, WheregiftActivity::class.java)
+        loginBtn.setOnClickListener {
+            var intent = Intent(this, FirstActivity::class.java)
             startActivity(intent)
         }
     }
