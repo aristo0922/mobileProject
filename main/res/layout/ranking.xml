@@ -1,84 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/main">
+    android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/header"
-        android:layout_height="75dp"
-        android:background="#D4FFFFFF"
-        android:layout_width="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-<!--    뒤로가기 = 다른 대화내용 불러오기-->
-    <ImageButton
-        android:id="@+id/button4"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintStart_toStartOf="@+id/header"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
-
-<!--    <ImageButton-->
-<!--        android:id="@+id/button3"-->
-<!--        android:layout_width="75dp"-->
-<!--        android:layout_height="75dp"-->
-<!--        app:srcCompat = "@drawable/back"-->
-<!--        홈버튼 넣을 예정/>-->
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="원한다. 선물"
-        android:textSize="27sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/listView2"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:stretchColumns="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+            <!--    뒤로가기 = 다른 대화내용 불러오기-->
+            <TableRow>
+                <ImageButton
+                    android:id="@+id/back3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="@+id/header"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/back" />
+                <TextView></TextView>
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toEndOf="@+id/header"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/home3" />
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="원한다. 선물"
+            android:fontFamily="@font/fontstyle"
+            android:textColor="#70000000"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="원할껄? 선물"
-        android:textSize="27sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView2" />
 
-    <ListView
-        android:id="@+id/listView1"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/fontstyle"
+            android:text="원할껄? 선물"
+            android:textColor="#70000000"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listView2" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/question1"-->
+        <!--        android:layout_width="36dp"-->
+        <!--        android:layout_height="33dp"-->
+        <!--        android:layout_marginStart="16dp"-->
+        <!--        android:layout_marginLeft="16dp"-->
+        <!--        android:layout_marginTop="24dp"-->
+        <!--        android:background="@android:color/transparent"-->
+        <!--        app:layout_constraintStart_toEndOf="@+id/textView2"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/header" />-->
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/question"-->
+        <!--        android:layout_width="36dp"-->
+        <!--        android:layout_height="33dp"-->
+        <!--        android:layout_marginStart="16dp"-->
+        <!--        android:layout_marginLeft="16dp"-->
+        <!--        android:layout_marginTop="24dp"-->
+        <!--        android:background="@android:color/transparent"-->
+        <!--        app:layout_constraintStart_toEndOf="@+id/textView"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/listView2" />-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/helptext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/fontstyle"
+            android:text="친구가 갖고싶다고\n직접 말한 단어들에요!"
+            android:textColor="#70000000"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/question1"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="40dp"
+            android:layout_marginTop="20dp">
+            <TableRow>
+                <Button
+                    android:id="@+id/otherText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="다른 대화 내용"
+                    app:backgroundTint="#A596E9" />
+
+                <TextView></TextView>
+                <Button
+                    android:id="@+id/resultSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="결과 저장"
+                    app:backgroundTint="#A596E9"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+</ScrollView>
