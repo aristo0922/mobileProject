@@ -13,7 +13,8 @@ class FirstActivity :AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first)
 
-
+        var myPage = findViewById<Button>(R.id.mypage)
+        var login = findViewById<Button>(R.id.login)
         var button1=findViewById<ImageButton>(R.id.button)
         var button2=findViewById<ImageButton>(R.id.button2)
         button1.setOnClickListener {
@@ -21,9 +22,20 @@ class FirstActivity :AppCompatActivity(){
             startActivity(intent)
         }
 
+
         button2.setOnClickListener{
             var intent= Intent(this, WheregiftActivity::class.java)
             startActivity(intent)
+        }
+        //        마이페이지
+        myPage.setOnClickListener {
+            var intent = Intent(this, MypageActivity::class.java)
+            startActivity(intent);
+        }
+
+//        로그인
+        login.setOnClickListener {
+            finish()
         }
     }
 }
