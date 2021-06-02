@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--    헤더-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,94 +42,96 @@
                     app:srcCompat="@drawable/home3" />
             </TableRow>
         </TableLayout>
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+
+<!--        메인컨텐츠 -->
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="원한다. 선물"
-            android:fontFamily="@font/fontstyle"
-            android:textColor="#70000000"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header" />
+            android:stretchColumns="0">
+
+            <TableRow>
+<!--                원한다. 선물-->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="원한다. 선물"
+                    android:fontFamily="@font/fontstyle"
+                    android:textColor="#70000000"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/header" />
+                <Button
+                    android:id="@+id/question1"
+                    android:layout_width="36dp"
+                    android:layout_height="33dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="\?"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_button"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/header" />
+            </TableRow>
+            <ListView
+                android:id="@+id/listView2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/fontstyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/fontstyle"
+                    android:text="원할껄? 선물"
+                    android:textColor="#70000000"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listView2" />
+
+                <Button
+                    android:id="@+id/question2"
+                    android:layout_width="36dp"
+                    android:layout_height="33dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="\?"
+                    android:textColor="@color/black"
+                    android:background="@drawable/round_button"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/listView2" />
+
+            </TableRow>
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:fontFamily="@font/fontstyle"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-        <ListView
-            android:id="@+id/listView2"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/fontstyle"
-            android:text="원할껄? 선물"
-            android:textColor="#70000000"
-            android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listView2" />
+        </TableLayout>
 
-        <ListView
-            android:id="@+id/listView1"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <!--    <ImageButton-->
-        <!--        android:id="@+id/question1"-->
-        <!--        android:layout_width="36dp"-->
-        <!--        android:layout_height="33dp"-->
-        <!--        android:layout_marginStart="16dp"-->
-        <!--        android:layout_marginLeft="16dp"-->
-        <!--        android:layout_marginTop="24dp"-->
-        <!--        android:background="@android:color/transparent"-->
-        <!--        app:layout_constraintStart_toEndOf="@+id/textView2"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/header" />-->
-
-        <!--    <ImageButton-->
-        <!--        android:id="@+id/question"-->
-        <!--        android:layout_width="36dp"-->
-        <!--        android:layout_height="33dp"-->
-        <!--        android:layout_marginStart="16dp"-->
-        <!--        android:layout_marginLeft="16dp"-->
-        <!--        android:layout_marginTop="24dp"-->
-        <!--        android:background="@android:color/transparent"-->
-        <!--        app:layout_constraintStart_toEndOf="@+id/textView"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/listView2" />-->
-
-
-
-        <TextView
-            android:id="@+id/helptext1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/fontstyle"
-            android:text="친구가 갖고싶다고\n직접 말한 단어들에요!"
-            android:textColor="#70000000"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/question1"
-            app:layout_constraintTop_toBottomOf="@+id/header" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -141,6 +144,7 @@
                     android:id="@+id/otherText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/fontstyle"
                     android:text="다른 대화 내용"
                     app:backgroundTint="#A596E9" />
 
@@ -149,6 +153,7 @@
                     android:id="@+id/resultSave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/fontstyle"
                     android:text="결과 저장"
                     app:backgroundTint="#A596E9"/>
             </TableRow>
