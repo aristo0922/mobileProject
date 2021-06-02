@@ -23,7 +23,7 @@ class BringtxtActivity :AppCompatActivity() {
         var back=findViewById<ImageButton>(R.id.back2)
         var ok=findViewById<Button>(R.id.bringok)
         var help =findViewById<Button>(R.id.help)
-        var home =findViewById<ImageButton>(R.id.button3)
+        var gotokakao = findViewById<ImageButton>(R.id.gotokakao)
 
 //        뒤로가기
         back.setOnClickListener{
@@ -36,17 +36,18 @@ class BringtxtActivity :AppCompatActivity() {
             startActivity(intent)
         }
 
-//        home.setOnClickListener {
-//            var intent= Intent(this, FirstActivity::class.java)
-//            startActivity(intent)
-//        }
+//        카카오톡으로 이동
+        gotokakao.setOnClickListener {
+
+        }
 
         //도움말 -> 팝업
-
         help.setOnClickListener{
             showSettingPopup()
         }
     }
+
+
     private fun showSettingPopup() {
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.activity_help, null)
